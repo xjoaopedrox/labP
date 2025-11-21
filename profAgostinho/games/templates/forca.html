@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desafio da Forca</title>
+</head>
+<body>
+
+<h1>Desafio da Forca</h1>
+
+<p>Palavra: {{ " ".join(letras_descobertas) }}</p>
+<p>Chances restantes: {{ tentativas_restantes }}/5</p>
+<p>{{ aviso }}</p>
+
+<form method="POST">
+    <label>Digite uma letra: <input type="text" name="entrada_letra" maxlength="1" required></label>
+    <button type="submit">Confirmar</button>
+</form>
+
+<br>
+<a href="/"><button>Retornar ao início</button></a>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio das Torres</title>
+</head>
+<body>
+    <h1>Desafio das Torres</h1>
+
+    <p>{{ mensagem }}</p>
+
+    <h3>Estado das Torres:</h3>
+    <p>Torre 1: {{ torres.torre1 }}</p>
+    <p>Torre 2: {{ torres.torre2 }}</p>
+    <p>Torre 3: {{ torres.torre3 }}</p>
+
+    <form method="POST">
+        <label>Escolha a torre de origem: </label>
+        <select name="origem_torre">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <label>Escolha a torre de destino: </label>
+        <select name="destino_torre">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <button type="submit">Realizar Movimento</button>
+    </form>
+
+    <br>
+    <a href="/">Retornar ao início</a>
+</body>
+</html>

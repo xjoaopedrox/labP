@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Jogo de Tiro</title>
+</head>
+<body>
+    <h1>Jogo de Tiro</h1>
+
+    <p>Tentativa atual: {{ tentativa_atual }}</p>
+    <p>Vidas restantes: {{ pontos_vida }}</p>
+    <p>{{ mensagem }}</p>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+        {% for linha_campo in tabuleiro %}
+        <tr>
+            {% for posicao in linha_campo %}
+            <td style="text-align:center;">{{ posicao }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Disparar</h3>
+    <form method="POST">
+        <label>Linha (0-9): <input type="number" name="linha_disparo" min="0" max="9" required></label><br><br>
+        <label>Coluna (0-9): <input type="number" name="coluna_disparo" min="0" max="9" required></label><br><br>
+        <button type="submit">Atirar</button>
+    </form>
+
+    <br>
+    <a href="/">Voltar para o menu</a>
+</body>
+</html>
