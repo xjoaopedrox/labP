@@ -9,7 +9,7 @@
 
     <div id="header">
         <h1>Painel do Usuário</h1>
-        <a href="{{ url_for('logout') }}">
+        <a href="{{ url_for('sair') }}"> 
             <button id="btn-sair">Sair</button>
         </a>
     </div>
@@ -17,13 +17,19 @@
     <div id="container">
         <h2>Bem-vindo, {{ usuario }}!</h2>
 
-        <p class="info"><span>Status:</span> {{ dados.status }}</p>
-        <p class="info"><span>Nota:</span> {{ dados.nota }}</p>
+        <p class="info"><span>Descrição:</span> {{ dados.descricao }}</p> 
+        
+        <p class="info"><span>Perfil:</span> {{ dados.perfil }}</p>
+        
         <p class="info"><span>Gênero:</span> {{ dados.genero }}</p>
-        <p class="info"><span>Prontuário:</span> {{ dados.prontuario }}</p>
-        <p class="info"><span>Matéria:</span> {{ dados.materia }}</p>
-        <p class="info"><span>Professor:</span> {{ dados.prof }}</p>
-    </div>
+        
+        <p class="info"><span>Registro (RA):</span> {{ dados.registro }}</p>
+        
+        <p class="info"><span>Disciplina:</span> {{ dados.disciplina }}</p>
+        
+        <p class="info"><span>Orientador/Professor:</span> {{ dados.orientador }}</p>
+        
+        </div>
 
 </body>
 </html>
