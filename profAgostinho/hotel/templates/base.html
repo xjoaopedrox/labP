@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Estada Feliz</title>
+
+    <style>
+        body.claro {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        body.escuro {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+
+        .topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .botao-tema {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="{{ tema }}">
+
+    <div class="topo">
+        <h1>Hotel Estada Feliz</h1>
+
+        <a href="/tema">
+            <button class="botao-tema">
+                Mudar para tema {{ 'claro' if tema == 'escuro' else 'escuro' }}
+            </button>
+        </a>
+    </div>
+
+    <hr>
+
+    {% block conteudo %}
+    {% endblock %}
+
+</body>
+</html>

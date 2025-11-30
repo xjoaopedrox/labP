@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<form method="POST">
+    <h2>Login</h2>
+    <input type="text" name="email" placeholder="E-mail">
+    <input type="password" name="senha" placeholder="Senha">
+
+
+    <button type="submit">Entrar</button>
+    {% if erro %}
+        <p style="color:red">{{ erro }}</p>
+    {% endif %}
+</form>
+{% endblock %}

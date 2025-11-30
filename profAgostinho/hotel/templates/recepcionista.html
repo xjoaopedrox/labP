@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Painel da Recepção</h1>
+
+<h2>Reservas</h2>
+<ul>
+    {% for r in reservas %}
+        <li>{{ r.hospede }} — Quarto {{ r.quarto }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Criar Reserva</h2>
+<form method="POST" action="/nova_reserva">
+    Nome: <input type="text" name="nome">
+    Quarto: <input type="text" name="quarto">
+    <button>Criar</button>
+</form>
+
+<a href="/logout">Sair</a>
+{% endblock %}

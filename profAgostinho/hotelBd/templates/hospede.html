@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Bem-vindo, {{ usuario.nome }}</h1>
+
+<p>Aqui você poderá ver sua reserva e informações pessoais.</p>
+
+<a href="/logout">Sair</a>
+{% endblock %}

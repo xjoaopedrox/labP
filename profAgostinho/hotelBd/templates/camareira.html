@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Painel da Camareira</h1>
+
+<h2>Status dos quartos</h2>
+<ul>
+{% for q in quartos %}
+<li>
+    Quarto {{ q.numero }} — {{ q.status }}
+
+    <form action="/atualizar_limpeza" method="POST" style="display:inline">
+        <input type="hidden" name="numero" value="{{ q.numero }}">
+        <select name="status">
+            <option>Limpo</option>
+            <option>Sujo</option>
+            <option>Limpando</option>
+        </select>
+        <button>Atualizar</button>
+    </form>
+</li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Sair</a>
+{% endblock %}
