@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkaunderCulture - ISR</title>
+</head>
+<body>
+    <h1>SkaunderCulture (ISR)</h1>
+    <p><i>Última regeneração: {{ updated }}</i></p>
+
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
