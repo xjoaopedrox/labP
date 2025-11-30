@@ -1,1 +1,15 @@
-base.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkaunderCulture - SSG</title>
+</head>
+<body>
+    <h1>SkaunderCulture (SSG)</h1>
+
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
